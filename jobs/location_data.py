@@ -1,7 +1,7 @@
 import os
 
 from nautobot.extras.datasources.git import ensure_git_repository
-from nautobot.apps.jobs import Job, register_jobs, ObjectVar, BooleanVar
+from nautobot.apps.jobs import Job, register_jobs, ObjectVar, BooleanVar, FileVar
 # type: ignore
 """Use retrieve device OS version and document in Nautobot LCM app."""
 
