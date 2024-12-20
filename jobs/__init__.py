@@ -1,1 +1,1 @@
-#!/usr/bin/python3
+"""__init.py__."""
