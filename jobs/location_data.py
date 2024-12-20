@@ -77,8 +77,8 @@ class SiteImportJob(Job):
         
         input_file = FileVar(required=True)
  
-    def run(self, *args, **data):
-        _file = self.data["input_file"].read().decode("utf-8-sig")
+    def run(self, *args, **kwargs):
+        _file = self.kwargs["input_file"].read().decode("utf-8-sig")
         with open(_file, "r") as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
