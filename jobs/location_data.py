@@ -77,7 +77,7 @@ class SiteImportJob(Job):
         
     file = FileVar(required=True)
  
-    def load_source_data(self):
+    def run(self):
         _file = self.kwargs["file"].read().decode("utf-8-sig")
         with open(_file, "r") as csvfile:
             reader = csv.DictReader(csvfile)
@@ -109,4 +109,4 @@ class SiteImportJob(Job):
         return row
 
 
-#register_jobs(SiteImportJob)
+register_jobs(SiteImportJob)
