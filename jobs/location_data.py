@@ -78,7 +78,7 @@ class SiteImportJob(Job):
     inputfile = FileVar(required=True)
  
     def run(self, *args, **kwargs):
-        with open(self.inputfile, "r") as csvfile:
+        with open(self.kwargs["inputfile"], "r") as csvfile:
             reader = csv.DictReader(csvfile)
             for row in reader:
                 normalized_row = self.normalize_data(row)
