@@ -75,7 +75,7 @@ class SiteImportJob(Job):
         approval_required = False
         has_sensitive_variables = False
         
-    input_file = FileVar(required=True)
+        input_file = FileVar(required=True)
  
     def run(self, *args, **data):
         _file = self.data["input_file"].read().decode("utf-8-sig")
